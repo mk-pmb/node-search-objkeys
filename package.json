@@ -1,6 +1,6 @@
 {
   "name": "search-objkeys",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "Search nested objects for key names",
   "main": "index.js",
   "scripts": {
@@ -15,6 +15,6 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git@mk-pmb.ssh.github.com:mk-pmb/node-search-objkeys.git"
+    "url": "git@github.com:mk-pmb/node-search-objkeys.git"
   }
 }
