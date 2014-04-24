@@ -24,13 +24,37 @@ function demo(keyWant, maxDepth) {
 
 
 demo('animal');
+//  Searching for "animal" to depth undefined:
+//  [ [ 'pets', 'Fred', 'animal' ],
+//    [ 'pets', 'Ferd', 'animal' ],
+//    [ 'pets', 'Scot', 'animal' ] ]
 
 demo('cowbell');
+//  Searching for "cowbell" to depth undefined:
+//  [ [ 'pets', 'Scot', 'cowbell' ] ]
 
 demo(/^[a-z]/);
+//  Searching for /^[a-z]/ to depth undefined:
+//  [ [ 'pets' ],
+//    [ 'houses' ],
+//    [ 'pets', 'Fred', 'animal' ],
+//    [ 'pets', 'Ferd', 'animal' ],
+//    [ 'pets', 'Scot', 'animal' ],
+//    [ 'pets', 'Scot', 'cowbell' ] ]
 
 demo(/^[a-z]/, 1);
+//  Searching for /^[a-z]/ to depth 1:
+//  [ [ 'pets' ], [ 'houses' ] ]
 
 demo(/^[A-Z]/);
+//  Searching for /^[A-Z]/ to depth undefined:
+//  [ [ 'pets', 'Fred' ], [ 'pets', 'Ferd' ], [ 'pets', 'Scot' ] ]
 
 demo(/[dl]$/);
+//  Searching for /[dl]$/ to depth undefined:
+//  [ [ 'pets', 'Fred' ],
+//    [ 'pets', 'Ferd' ],
+//    [ 'pets', 'Fred', 'animal' ],
+//    [ 'pets', 'Ferd', 'animal' ],
+//    [ 'pets', 'Scot', 'animal' ],
+//    [ 'pets', 'Scot', 'cowbell' ] ]
